@@ -52,7 +52,7 @@ occupying ${area3} square meters.`);
 
 if (area3 >= (area*0.8)) {
     console.log(`${area3} square meters is more than ${area * 0.8} (i.e., 80% of garden area available)\
-    This means that there is plants need to be pruned.`)
+    This means that plants need to be pruned.`)
 } else if (area3 <= (area/2)) {
     console.log(`plant`);
 } else {
@@ -101,3 +101,20 @@ would need ${areaCoveredByPlants} square meters of space.`);
 // If the amount of space required to hold the originally provided 
 // number of plants exceeds the amount of space available,
 // throw a new error and log an appropriate message. 
+
+let areaOccupied = 10
+try {
+    if (areaOccupied >= (area*0.8)) {
+        throw ("Error: There is no space in garden")
+    } else if (area2 <= (area/2)) {
+        console.log(`${areaOccupied} square meters is less than ${area/2} (i.e., 50% of garden area available).
+This means that there is room to plant more plants.`);
+    } else {
+        console.log(`${areaOccupied} square meters is more than ${area/2} (i.e., 50% of garden area available)
+but less than ${area * 0.8} (i.e., 80% of garden area available).
+This means that plants need to be monitored.`)
+    }
+} catch (error) {
+    console.log(`${areaOccupied} square meters is more than ${area * 0.8} (i.e., 80% of garden area available)
+This means that the plants need to be pruned.`)
+}
