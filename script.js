@@ -85,12 +85,16 @@ if (area3 >= (area*0.8)) {
 // Part 2
 // Compute the amount of additional space that would be needed if 
 // we started with 100 plants that didn't prune them for 10 weeks
+
 let totalPlants = (100*(2 ** 10))
-console.log(totalPlants);
-// let areaCoveredByPlants = totalPlants * minPlantSpace
-// console.log(areaCoveredByPlants);
-// let spaceNeed = areaCoveredByPlants - area
-// console.log(spaceNeed);
+
+let areaCoveredByPlants = totalPlants * minPlantSpace
+
+let spaceNeed = areaCoveredByPlants - area
+
+console.log(`To plant 100 plants with no pruning for 10 weeks in the same garden, ${spaceNeed} square meters of additional space
+would be needed. This is because, by the end of the ten weeks, we would have ${totalPlants} plants that
+would need ${areaCoveredByPlants} square meters of space.`);
 
 //Part 3
 // Use try and catch to wrap your work in an error-handling block.
